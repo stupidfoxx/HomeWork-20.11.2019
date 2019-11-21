@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+    <title>HomeWork 21.11.2019</title>
+	<link  rel="stylesheet" href="./styles/main.css">
+  </head>
+  <body>
+
+    <div class="wrapper">
+    <input type="text" class="inpution" onchange='myFunction();' placeholder="Ваше Имя">
+    <div class="male">Мужчина</div>
+    <div class="female">Женщина</div>
+    <div class="inform"></div>
+    </div>
+
+    <script>
+      function myFunction() {
+        let a = document.querySelector('.inpution').value;
+        return a;
+      } 
+
+      let male   =  document.querySelector('.male'); /*man*/
+      let female =  document.querySelector('.female'); /*wooman*/
+      let answer =  document.querySelector('.inform'); /*answer*/
+      let error  = 'Как Вас зовут?';
+      male.addEventListener('click', function() {
+        let answerInput =  myFunction();
+
+        if (answerInput.length > 0){
+          answer.className = 'blue';
+          answer.innerText = `${answerInput}, купи машину!`;  
+        }else{
+          answer.className = 'inform';
+          answer.innerText = error;
+        }
+      });
+
+      female.addEventListener('click', function() {
+        let answerInput =  myFunction();
+
+        if (answerInput.length > 0){
+          answer.className = 'pink';
+          answer.innerText = `${answerInput}, купи Мишку ^.^`;  
+        }else{
+          answer.className = 'inform';
+          answer.innerText = error;
+        }
+      });
+    </script>
+
+  </body>
+</html>

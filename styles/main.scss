@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.blue {
+    color: rgb(77, 160, 255);
+    font-size: 22px;
+}
+
+.pink {
+    color: rgb(255, 0, 221);
+    font-size: 22px;
+}
+
+.wrapper {
+    margin: 150px auto;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: rgb(233, 233, 233);
+    padding: 15px;
+    border-radius: 20px;
+    font-family: "Verdana", sans-serif;
+    box-shadow: 0px 0px 25px 3px rgb(185, 185, 185);
+    & .inpution {
+        margin-top: 20px;
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+        font-size: 20px;
+        border: 1px solid #CCCCCC;
+        padding-left: 10px;
+        transition: .3s;
+        &:focus {
+            border: 1px solid #286EFA !important;
+		    outline-width: 0;
+        }
+    }
+    & .male, .female {
+        width: 120px;
+        height: 30px;
+        background: #286EFA;
+        color: white;
+        font-size: 22px;
+        border: 1px solid #286EFA;
+        border-radius: 3px;
+        text-align: center;
+        &:hover {
+            background: rgb(75, 135, 255);
+            cursor: pointer;
+        }
+    }
+    & .inform {
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        font-size: 22px;
+        color: rgb(253, 55, 55);
+        }
+}
